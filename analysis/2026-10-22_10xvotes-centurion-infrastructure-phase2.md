@@ -51,7 +51,7 @@ The CT record confirms Phase 1's host list, finds no hidden hosts, and adds one 
 
 **After August 23, 2026, none of the five jurisdiction hosts got a new certificate.** The apex, www and auth hosts kept renewing through September 2026.
 
-**The certificates also date the direct-to-Azure configuration.** Azure only issues managed certificates to a domain pointing directly at the app, not through a proxy such as Cloudflare (Microsoft support staff: https://learn.microsoft.com/en-us/answers/questions/412809/cant-create-app-service-managed-certificates-while). So skcn pointed straight at Azure on each issuance date: 2025-03-07, 2025-07-25, 2025-12-12 and 2026-02-23. Proxy settings between those dates remain unverified.
+**The certificates also date the direct-to-Azure configuration.** Microsoft's documentation requires a subdomain's CNAME to be "mapped directly" to `<app>.azurewebsites.net` for a managed certificate (https://learn.microsoft.com/en-us/azure/app-service/configure-ssl-certificate). So skcn's DNS pointed at the Azure app on each issuance date: 2025-03-07, 2025-07-25, 2025-12-12 and 2026-02-23. Whether Cloudflare's proxy was ever also enabled is unresolved: Microsoft staff said in April 2026 that Cloudflare proxying does not formally block managed certificates (https://learn.microsoft.com/en-us/answers/questions/5861609/app-service-managed-certificate-renewal-with-cloud). An earlier version of this note said proxying prevents issuance; that rested on a 2021 forum answer and is withdrawn.
 
 **The "GeoTrust" certificates are Azure's, not a separately bought DigiCert account.** Azure App Service managed certificates are issued through DigiCert's GeoTrust intermediates, with six-month validity and midnight start times. That matches these exactly.
 
@@ -73,7 +73,7 @@ Every component that touched skcn traffic is a US company, and the compute was i
 | Mail | aspmx.l.google.com and alternates; SPF includes Google | Google Workspace |
 | TXT | two Google site verifications, `brevo-code:…`; DMARC `p=none` | Google, Brevo |
 
-**Azure subscription link.** `asuid.skcn`, `asuid.wi`, `asuid.pa` and `asuid.hn` all return the same custom-domain verification ID, `CCE16DBFD953C667013F67299E71409AE9E7EA7994CD964270E2A5E60AD5DFD3`. Azure issues this ID per subscription. Michigan has no `asuid` record. Azure recommends but does not require the TXT record for a subdomain, so its absence proves nothing either way; Michigan is tied to the fleet by its stamp, its app name and its certificates.
+**Azure subscription link.** `asuid.skcn`, `asuid.wi`, `asuid.pa` and `asuid.hn` all return the same custom-domain verification ID, `CCE16DBFD953C667013F67299E71409AE9E7EA7994CD964270E2A5E60AD5DFD3`. The ID is per subscription; Microsoft documentation does not state this, but a Microsoft moderator demonstrated it (Microsoft Q&A 826791, May 2022). Michigan has no `asuid` record. Azure recommends but does not require the TXT record for a subdomain, so its absence proves nothing either way; Michigan is tied to the fleet by its stamp, its app name and its certificates.
 
 **No other jurisdictions found.** `ab.`, `abcn.` and `ca.10xvotes.com` do not exist (NXDOMAIN). There is no wildcard DNS record. Plausible sibling app names such as `10xvotes-ab`, `-ca`, `-sk`, `-dev` and `-staging` on azurewebsites.net also do not exist. This was a limited check, not an enumeration.
 
@@ -120,7 +120,7 @@ Centurion's public site is a Wix site with no technical overlap with 10X's Azure
 | 2026-02-23 | All five jurisdiction apps issued certs together | crt.sh |
 | 2026-02-26 | Centurion site (Wix) first cert | crt.sh |
 | 2026-04-30 | Injunction; Centurion app offline | Elections Alberta |
-| 2026-05-19 | Observer finds skcn; taken offline within hours | National Observer |
+| 2026-05 (week of 18th) | Observer finds skcn; taken offline within hours (reported May 20) | National Observer |
 | 2026-08-23 | All five jurisdiction certs lapse; none renewed | crt.sh |
 | 2026-10-19 | Alberta referendum | — |
 
