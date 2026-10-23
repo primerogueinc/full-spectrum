@@ -1,10 +1,10 @@
 timestamp,original,statuscode,note
 20260311135325,http://thecenturionproject.ca/,301,
 20260313024040,https://www.thecenturionproject.ca/10,404,
-20260320015042,https://www.thecenturionproject.ca/_api/tag-manager/api/v1/tags/sites/5e660ab8-c9c9-47ce-a2a0-9bc383fdd64b,200,query string trimmed
-20260530132452,https://www.thecenturionproject.ca/_api/tag-manager/api/v1/tags/sites/5e660ab8-c9c9-47ce-a2a0-9bc383fdd64b,200,query string trimmed
+20260320015042,https://www.thecenturionproject.ca/_api/tag-manager/api/v1/tags/sites/5e660ab8-c9c9-47ce-a2a0-9bc383fdd64b?wixSite=false&htmlsiteId=d0b32d3e-d22f-4ab1-93ea-c292f6a50fb7&language=en&partytown=false,200,
+20260530132452,https://www.thecenturionproject.ca/_api/tag-manager/api/v1/tags/sites/5e660ab8-c9c9-47ce-a2a0-9bc383fdd64b?wixSite=false&htmlsiteId=d0b32d3e-d22f-4ab1-93ea-c292f6a50fb7&language=en,200,
 20260320015041,https://www.thecenturionproject.ca/_api/v1/access-tokens,200,
-20260505170559,https://www.thecenturionproject.ca/_api/wix-laboratory-server/laboratory/conductExperiment,200,query string trimmed
+20260505170559,https://www.thecenturionproject.ca/_api/wix-laboratory-server/laboratory/conductExperiment?key=specs.funnel.getStartedCTAHeaderBlack&fallback=false,200,
 20260430061756,https://www.thecenturionproject.ca/_files/ugd/8cdbe1_422e721085ed4cccabc6549a1a449726.pdf,200,
 20260430162151,https://www.thecenturionproject.ca/_serverless/analytics-reporter/facebook/event,200,
 20260312142802,https://www.thecenturionproject.ca/ads.txt,404,
@@ -18,9 +18,9 @@ timestamp,original,statuscode,note
 20260415001258,https://www.thecenturionproject.ca/event-details/do-you-want-to-be-a-centurion-2026-04-16-19-00,200,
 20260712114134,https://www.thecenturionproject.ca/event-details/do-you-want-to-be-a-centurion-2026-04-23-19-00,200,
 20260430162151,https://www.thecenturionproject.ca/event-details/do-you-want-to-be-a-centurion-2026-04-30-19-00,200,
-20260505071248,https://www.thecenturionproject.ca/event-details/do-you-want-to-be-a-centurion-2026-04-30-19-00/link-expired,200,REDACTED: query string held an attendee order number and signed token
-20260505071137,https://www.thecenturionproject.ca/event-details/do-you-want-to-be-a-centurion-2026-04-30-19-00/order/[REDACTED]/success,200,REDACTED: path and query held an attendee reservation ID and signed token
-20260501000645,https://www.thecenturionproject.ca/event-details/do-you-want-to-be-a-centurion-2026-04-30-19-00/ticket-form,200,REDACTED: query string held an attendee reservation ID
+20260505071248,https://www.thecenturionproject.ca/event-details/do-you-want-to-be-a-centurion-2026-04-30-19-00/link-expired?eventId=e4a96990-7f5a-4be2-9796-5d9c1573a154&orderNumber=309B-0J3S-K9V&token=JWS.eyJraWQiOiJpb21iOUJ0eSIsImFsZyI6IkhTMjU2In0.eyJkYXRhIjoie1wiZXZlbnRJZFwiOlwiZTRhOTY5OTAtN2Y1YS00YmUyLTk3OTYtNWQ5YzE1NzNhMTU0XCIsXCJyZXNlcnZhdGlvbklkXCI6XCI4YTMxZDk0MS1lZjI2LTQzMTAtODgyYy04NTBkZjExNTNmM2FcIixcIm9yZGVyTnVtYmVyXCI6XCIzMDlCLTBKM1MtSzlWXCIsXCJzdGF0dXNcIjpcInN1Y2Nlc3NcIixcImluc3RhbmNlSWRcIjpcIjRiNTc5MzZmLWMyZDEtNDJmMC1hOTBjLTNhMjVkMjViYjQ2NlwifSIsImlhdCI6MTc3NzU5Mzk5MiwiZXhwIjoxNzc3NjgwMzkyfQ.YDQ77DUV7YKFuwvsfP54Fru6B75TJx4n3zhxZ6_L1zA,200,"Restored unredacted. Signed token payload decodes to eventId, reservationId, orderNumber 309B-0J3S-K9V, status success, instanceId; no name or email. Issued 2026-05-01 00:06 UTC, expired 2026-05-02 00:06 UTC."
+20260505071137,https://www.thecenturionproject.ca/event-details/do-you-want-to-be-a-centurion-2026-04-30-19-00/order/8a31d941-ef26-4310-882c-850df1153f3a/success?eventId=e4a96990-7f5a-4be2-9796-5d9c1573a154&orderNumber=309B-0J3S-K9V&token=JWS.eyJraWQiOiJpb21iOUJ0eSIsImFsZyI6IkhTMjU2In0.eyJkYXRhIjoie1wiZXZlbnRJZFwiOlwiZTRhOTY5OTAtN2Y1YS00YmUyLTk3OTYtNWQ5YzE1NzNhMTU0XCIsXCJyZXNlcnZhdGlvbklkXCI6XCI4YTMxZDk0MS1lZjI2LTQzMTAtODgyYy04NTBkZjExNTNmM2FcIixcIm9yZGVyTnVtYmVyXCI6XCIzMDlCLTBKM1MtSzlWXCIsXCJzdGF0dXNcIjpcInN1Y2Nlc3NcIixcImluc3RhbmNlSWRcIjpcIjRiNTc5MzZmLWMyZDEtNDJmMC1hOTBjLTNhMjVkMjViYjQ2NlwifSIsImlhdCI6MTc3NzU5Mzk5MiwiZXhwIjoxNzc3NjgwMzkyfQ.YDQ77DUV7YKFuwvsfP54Fru6B75TJx4n3zhxZ6_L1zA,200,"Restored unredacted. Signed token payload decodes to eventId, reservationId, orderNumber 309B-0J3S-K9V, status success, instanceId; no name or email. Issued 2026-05-01 00:06 UTC, expired 2026-05-02 00:06 UTC."
+20260501000645,https://www.thecenturionproject.ca/event-details/do-you-want-to-be-a-centurion-2026-04-30-19-00/ticket-form?reservationId=8a31d941-ef26-4310-882c-850df1153f3a,200,Restored unredacted. Reservation ID matches the token above.
 20260503081626,https://www.thecenturionproject.ca/event-details/do-you-want-to-be-a-centurion-2026-05-07-19-00,200,
 20260513164847,https://www.thecenturionproject.ca/event-details/do-you-want-to-be-a-centurion-2026-05-14-19-00,200,
 20260712122601,https://www.thecenturionproject.ca/event-details/do-you-want-to-be-a-centurion-2026-05-21-19-00,200,
@@ -32,7 +32,7 @@ timestamp,original,statuscode,note
 20260712115710,https://www.thecenturionproject.ca/event-details/do-you-want-to-be-a-centurion-2026-07-02-19-00,200,
 20260427201326,https://www.thecenturionproject.ca/event-details/operation-secure-independence,200,
 20260427213132,https://www.thecenturionproject.ca/event-details/operation-secure-independence-calgary,200,
-20260426012234,https://www.thecenturionproject.ca/event-details/operation-secure-independence,200,REDACTED: query string held a recipient campaign ID
+20260426012234,https://www.thecenturionproject.ca/event-details/operation-secure-independence?utm_campaign=92276c88-5552-4344-826f-740b75f0e1de&utm_source=so&utm_medium=mail&cid=ec4277f9-bf0a-42a2-ae75-4fae2ea1c237,200,Restored unredacted. ShoutOut (Wix email) campaign link; cid is a recipient/contact ID.
 20260320015058,https://www.thecenturionproject.ca/event-list,200,
 20260312143456,https://www.thecenturionproject.ca/event-pages-sitemap.xml,200,
 20260312142950,https://www.thecenturionproject.ca/favicon.ico,200,
@@ -46,6 +46,6 @@ timestamp,original,statuscode,note
 20260430152612,https://www.thecenturionproject.ca/resources,200,
 20260312142717,https://www.thecenturionproject.ca/robots.txt,200,
 20260312143241,https://www.thecenturionproject.ca/sitemap.xml,200,
-20260512003609,https://thecenturionproject.ca/so/09PtQEbhx,200,REDACTED: query string held a recipient campaign ID
-20260430132746,https://thecenturionproject.ca/so/tr/[REDACTED],200,REDACTED: path held a recipient tracking ID
+20260512003609,https://thecenturionproject.ca/so/09PtQEbhx?languageTag=en&cid=98734c70-dba4-4ae1-9398-ca01e5822559,200,Restored unredacted. ShoutOut campaign link; cid is a recipient/contact ID.
+20260430132746,https://thecenturionproject.ca/so/tr/c66e5d60-1104-4e72-81d5-f526b768be9c,200,Restored unredacted. ShoutOut tracking link.
 20260501233226,https://www.thecenturionproject.ca/v1/bulk/report-exposures,403,

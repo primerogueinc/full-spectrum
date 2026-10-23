@@ -25,7 +25,7 @@ Public records on the 10X Votes app (skcn.10xvotes.com) that held Alberta voter 
 | `dns/dns-resolutions-10xvotes.csv` | DNS answers for 10xvotes.com hosts via Google Public DNS, 2026-10-22, about 09:30–10:30 UTC, including Azure `asuid` verification records |
 | `dns/dns-resolutions-centurion.csv` | DNS answers for Centurion-related domains, same session |
 | `wayback/cdx-10xvotes.com.csv` | Internet Archive CDX index for 10xvotes.com and all subdomains |
-| `wayback/cdx-thecenturionproject.ca.csv` | Internet Archive CDX index for thecenturionproject.ca. Wix platform bundle files are omitted. Ticket-order and email-campaign URLs are redacted because they contained attendees' order numbers, reservation IDs and signed tokens. |
+| `wayback/cdx-thecenturionproject.ca.csv` | Internet Archive CDX index for thecenturionproject.ca. Wix platform bundle files are omitted; all other URLs are complete. Ticket-order rows include a Wix order number, reservation ID and signed token for the April 30, 2026 session (token payload decoded in the `note` column: no name or email; issued 2026-05-01 00:06 UTC, expired 24 hours later). Email-campaign rows include ShoutOut campaign and contact IDs. An earlier redacted version is preserved in git history and by its superseded timestamp proof. |
 | `wayback/key-captures.csv` | The archived pages relied on in the analysis, with direct capture links |
 | `workbook/10xvotes-phase2-evidence.xlsx` | The same data as one workbook, with a per-host summary |
 
