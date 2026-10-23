@@ -1,9 +1,17 @@
 b9a3c1c0afb7eb59e0630e412030da4a8fddab8a626d959fa19c092f124e1ae4  data/2026-10-22_10xvotes-azure/crtsh/10xvotes-certificates.csv
+e72f664e84d18332fe6b9687ce7d5666c5b64ba4a48b97ceca4a41060271267f  data/2026-10-22_10xvotes-azure/crtsh/10xvotes-certificates.csv.ots.bak
 01871510897f22cbf22aa7be9cfad66569eaf4e06a7e7f3b5371bba0e1306b07  data/2026-10-22_10xvotes-azure/crtsh/centurion-domains-summary.csv
+e6b99269a80c7b785785de0653d09f8452aa70d3efea0e9e802084eab30165a5  data/2026-10-22_10xvotes-azure/crtsh/centurion-domains-summary.csv.ots.bak
 7ceb3a7fb4079413a86deea5f9eb9fac127997a3949947a8926ba851d79da8de  data/2026-10-22_10xvotes-azure/dns/dns-resolutions-10xvotes.csv
+99c82cb34fe8dc6f8a1462262ae1157a7af81dfc4b66d997be43a817ce1e87fb  data/2026-10-22_10xvotes-azure/dns/dns-resolutions-10xvotes.csv.ots.bak
 6f0a68c13b4d2d30ca7067e768ef9257fa261e59c525e5289796b4e095bb5799  data/2026-10-22_10xvotes-azure/dns/dns-resolutions-centurion.csv
+75d1be5bfc2f491009c5fb22cb2828d96bb4704511e24ecf563cf264817a1f7c  data/2026-10-22_10xvotes-azure/dns/dns-resolutions-centurion.csv.ots.bak
 4a4bf4f5ac2438f43816d1fe1a3a700ddc4c2f9f95af4f43b37a847267270c86  data/2026-10-22_10xvotes-azure/wayback/cdx-10xvotes.com.csv
+5a4ef71ae83ae4aae7ef368e76afc303a036887daf957a53f9fb44f1cab024b9  data/2026-10-22_10xvotes-azure/wayback/cdx-10xvotes.com.csv.ots.bak
 ce7143de8cd7bc3ef877c5d7a6eed5fa040b52d497d746c8872c2424b8e624c3  data/2026-10-22_10xvotes-azure/wayback/cdx-thecenturionproject.ca.csv
+2f0d36056cb3ec47236b04fc51ea41d8a94ed9823ee64504bb80301fc90ef974  data/2026-10-22_10xvotes-azure/wayback/cdx-thecenturionproject.ca.csv.ots.bak
 126bb44d27c79e7993277d36990f3cee94e7e2ad6027a15f7b6a1b42d85805d6  data/2026-10-22_10xvotes-azure/wayback/key-captures.csv
+f782fadc0c192363826fa891d68cfc35bb79e0299887117c34deac21e9cd5fb2  data/2026-10-22_10xvotes-azure/wayback/key-captures.csv.ots.bak
 caf9375f65d7f6ac7d08d61124d24caf49a266bc1a805760aa94b78060f22b8b  data/2026-10-22_10xvotes-azure/workbook/10xvotes-phase2-evidence.xlsx
+47cbe21de4f3044abe6e80fc6510e6cdd582ad642ac8767f7b44ec2ec8eaab23  data/2026-10-22_10xvotes-azure/workbook/10xvotes-phase2-evidence.xlsx.ots.bak
 99771c394b6b0b11ec6082ef550b64738c0c6115b4b40ecddff4d3d0ee615b9e  analysis/2026-10-22_10xvotes-centurion-infrastructure-phase2.md
