@@ -10,6 +10,7 @@ on:
       - "data/**"
       - "analysis/**"
       - "scripts/stamp.py"
+      - ".github/workflows/opentimestamps.yml"
   schedule:
     - cron: "23 */6 * * *"
   workflow_dispatch:
@@ -41,10 +42,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- '*.ots' '*.ots.superseded-*' MANIFEST.sha256
+          git add -A -- data analysis MANIFEST.sha256 MANIFEST.sha256.ots
           if git diff --cached --quiet; then
             echo "No proof changes."
           else
             git commit -m "OpenTimestamps: stamp/upgrade proofs [skip ci]"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
