@@ -1,10 +1,10 @@
 # 10X Votes / Centurion: Cross-Border Infrastructure Forensics, Phase 2
 
-Prime Rogue Inc. · Analysis dated 2026-10-22 · Data: `data/2026-10-22_10xvotes-azure/`
+Prime Rogue Inc. · Analysis dated 2026-10-22 · Revised 2026-10-23 after fact-check (Michigan subscription scope, Calgary event date, asuid note, certificate-dating point) · Data: `data/2026-10-22_10xvotes-azure/`
 
 ## Bottom line
 
-The Alberta voter records found on **skcn.10xvotes.com** were served from a Microsoft Azure App Service app in the East US region (Virginia). That app sits in the same Azure subscription as 10X Votes' Michigan, Wisconsin, Pennsylvania and "hn" apps. That is a stronger and more specific cross-border finding than Phase 1. It also corrects Phase 1 on several points.
+The Alberta voter records found on **skcn.10xvotes.com** were served from a Microsoft Azure App Service app in the East US region (Virginia). That app sits in the same Azure subscription as 10X Votes' Wisconsin, Pennsylvania and "hn" apps, and on the same server cluster as its Michigan app. That is a stronger and more specific cross-border finding than Phase 1. It also corrects Phase 1 on several points.
 
 | # | Finding | Confidence |
 | --- | --- | --- |
@@ -51,6 +51,8 @@ The CT record confirms Phase 1's host list, finds no hidden hosts, and adds one 
 
 **After August 23, 2026, none of the five jurisdiction hosts got a new certificate.** The apex, www and auth hosts kept renewing through September 2026.
 
+**The certificates also date the direct-to-Azure configuration.** Azure only issues managed certificates to a domain pointing directly at the app, not through a proxy such as Cloudflare (Microsoft support staff: https://learn.microsoft.com/en-us/answers/questions/412809/cant-create-app-service-managed-certificates-while). So skcn pointed straight at Azure on each issuance date: 2025-03-07, 2025-07-25, 2025-12-12 and 2026-02-23. Proxy settings between those dates remain unverified.
+
 **The "GeoTrust" certificates are Azure's, not a separately bought DigiCert account.** Azure App Service managed certificates are issued through DigiCert's GeoTrust intermediates, with six-month validity and midnight start times. That matches these exactly.
 
 The wildcard certificate Phase 1 cited is crt.sh ID 26199793381 (issued 2026-05-09, expiring 2026-08-07). It covers `*.10xvotes.com` at Cloudflare's edge. It is not the certificate skcn presented, because skcn was not proxied.
@@ -71,7 +73,7 @@ Every component that touched skcn traffic is a US company, and the compute was i
 | Mail | aspmx.l.google.com and alternates; SPF includes Google | Google Workspace |
 | TXT | two Google site verifications, `brevo-code:…`; DMARC `p=none` | Google, Brevo |
 
-**Azure subscription link.** `asuid.skcn`, `asuid.wi`, `asuid.pa` and `asuid.hn` all return the same custom-domain verification ID, `CCE16DBFD953C667013F67299E71409AE9E7EA7994CD964270E2A5E60AD5DFD3`. Azure issues this ID per subscription. Michigan has no `asuid` record, consistent with being verified earlier by CNAME alone.
+**Azure subscription link.** `asuid.skcn`, `asuid.wi`, `asuid.pa` and `asuid.hn` all return the same custom-domain verification ID, `CCE16DBFD953C667013F67299E71409AE9E7EA7994CD964270E2A5E60AD5DFD3`. Azure issues this ID per subscription. Michigan has no `asuid` record. Azure recommends but does not require the TXT record for a subdomain, so its absence proves nothing either way; Michigan is tied to the fleet by its stamp, its app name and its certificates.
 
 **No other jurisdictions found.** `ab.`, `abcn.` and `ca.10xvotes.com` do not exist (NXDOMAIN). There is no wildcard DNS record. Plausible sibling app names such as `10xvotes-ab`, `-ca`, `-sk`, `-dev` and `-staging` on azurewebsites.net also do not exist. This was a limited check, not an enumeration.
 
@@ -99,7 +101,7 @@ Centurion's public site is a Wix site with no technical overlap with 10X's Azure
 
 - **Site build:** Wix Members Area, Events & Tickets, Groups, Forms, Donations, Phone/SMS Campaigns, ShoutOut email marketing, and Facebook Server-Side Events (member and event data is sent to Meta).
 - **"My Addresses" is not the voter app.** It is Wix's stock members-area address book.
-- **Events:** weekly "Do you want to be a Centurion" sessions from April 16 to July 2, 2026, and "Operation Secure Independence" in Edmonton and Calgary, archived April 26–27.
+- **Events:** weekly "Do you want to be a Centurion" sessions from April 16 to July 2, 2026, and "Operation Secure Independence" events in Edmonton (April 29, 2026, where Elections Alberta served Centurion) and Calgary (listed for May 8, 2026, Genesis Centre); both event pages were archived April 26–27. A Wix ticket order for the April 30, 2026 7 p.m. session (order 309B-0J3S-K9V) was completed at about 6:06 p.m. MDT that day, the day of the injunction. That shows registration was still open and processing; it does not by itself show the session was held.
 - **No link from the Wix site to any app host** appears in the archived home, resources, donations or event pages.
 
 **Open question:** the production Centurion app, the one Elections Alberta had shut down on April 30, has not been tied to a hostname. Court filings, Elections Alberta's investigation record, or the YouTube training video should name it.
@@ -124,7 +126,7 @@ Centurion's public site is a Wix site with no technical overlap with 10X's Azure
 
 ## What it proves, and next asks
 
-**Proven from public records.** The host the Observer found holding Alberta voter records (skcn) was a Microsoft Azure web app in Virginia, built from 10X Votes' Michigan code, administered in the same Azure subscription as four US election apps, and renewed in lockstep with them. Login credentials and search queries went straight to that US server.
+**Proven from public records.** The host the Observer found holding Alberta voter records (skcn) was a Microsoft Azure web app in Virginia, built from 10X Votes' Michigan code, administered in the same Azure subscription as three US election apps, on the same server cluster as Michigan's, and renewed in lockstep with all four. Login credentials and search queries went straight to that US server.
 
 **Not proven.**
 
