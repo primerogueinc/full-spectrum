@@ -1,0 +1,8 @@
+Capture (UTC),URL,Observed,Wayback link
+2025-03-07 17:22:50,http://skcn.10xvotes.com/,301 to login,https://web.archive.org/web/20250307172250/http://skcn.10xvotes.com/
+2025-03-07 17:22:51,https://skcn.10xvotes.com/Identity/Account/Login,"200; ""Login - 10X Votes""; loads MiFamilyVotingWebsite.styles.css; form posts to self; LiveChat + DataTables",https://web.archive.org/web/20250307172251/https://skcn.10xvotes.com/Identity/Account/Login?ReturnUrl=%2F
+2024-10-09 to 2024-12-17,"https://pa.10xvotes.com/ (css, js)",Same MiFamilyVotingWebsite.styles.css and site.css hash as mi; search.js calls /voterinfo/setupData; filters name/address/age/county/township,https://web.archive.org/web/20241215042917/https://pa.10xvotes.com/js/search.js
+2024-08-29,https://mi.10xvotes.com/,302 (to Identity login),https://web.archive.org/web/20240829163142/https://mi.10xvotes.com/
+2025-04-04 22:35,http://auth.10xvotes.com/,426,https://web.archive.org/web/20250404223513/http://auth.10xvotes.com/
+2026-01-14 05:20,https://www.10xvotes.com/app-sign-up,"""a product of Voteatron""; SMS consent",https://web.archive.org/web/20260114052020/https://www.10xvotes.com/app-sign-up
+2026-01-14 04:11,https://www.10xvotes.com/privacy,SMS restricted to US residents; no Canada or cross-border language,https://web.archive.org/web/20260114041114/https://www.10xvotes.com/privacy

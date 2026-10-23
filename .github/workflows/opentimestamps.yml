@@ -1,0 +1,50 @@
+name: OpenTimestamps
+
+# Stamps every evidence file into the Bitcoin blockchain via OpenTimestamps,
+# and upgrades pending proofs to full Bitcoin attestations every 6 hours.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "analysis/**"
+      - "scripts/stamp.py"
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: opentimestamps
+  cancel-in-progress: false
+
+jobs:
+  stamp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install OpenTimestamps client
+        run: pip install opentimestamps-client
+
+      - name: Stamp new or changed files, upgrade pending proofs
+        run: python scripts/stamp.py
+
+      - name: Commit proofs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- '*.ots' '*.ots.superseded-*' MANIFEST.sha256
+          if git diff --cached --quiet; then
+            echo "No proof changes."
+          else
+            git commit -m "OpenTimestamps: stamp/upgrade proofs [skip ci]"
+            git push
+          fi

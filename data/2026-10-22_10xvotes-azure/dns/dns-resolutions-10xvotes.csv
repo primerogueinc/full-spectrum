@@ -1,0 +1,19 @@
+Name,Type,Answer,IP,Provider / meaning
+skcn.10xvotes.com,CNAME chain,10xvotes-skcn.azurewebsites.net > waws-prod-blu-319.sip.azurewebsites.windows.net > waws-prod-blu-319-7e61.eastus.cloudapp.azure.com,20.119.0.3,"Microsoft Azure App Service, East US"
+mi.10xvotes.com,CNAME chain,10xvotes.azurewebsites.net > waws-prod-blu-319 (eastus),20.119.0.3,Azure East US
+wi.10xvotes.com,CNAME chain,10xvotes-wi.azurewebsites.net > waws-prod-blu-319 (eastus),20.119.0.3,Azure East US
+pa.10xvotes.com,CNAME chain,10xvotes-pa.azurewebsites.net > waws-prod-blu-319 (eastus),20.119.0.3,Azure East US
+hn.10xvotes.com,CNAME chain,10xvotes-hn.azurewebsites.net > waws-prod-blu-319 (eastus),20.119.0.3,Azure East US
+asuid.skcn / .wi / .pa / .hn,TXT,CCE16DBFD953C667013F67299E71409AE9E7EA7994CD964270E2A5E60AD5DFD3 (identical on all four),,Azure custom-domain verification ID (per subscription)
+asuid.mi.10xvotes.com,TXT,NXDOMAIN,,
+auth.10xvotes.com,CNAME chain,dev-pozsa82q46m6bv13-cd-mxvbschswsydpfhi.edge.tenants.us.auth0.com > dev-pozsa82q46m6bv13.us.auth0.com > auth0-ingress.us.auth0.com.cdn.cloudflare.net,"172.64.144.74, 104.18.43.182",Auth0 (Okta) US tenant
+10xvotes.com,A/AAAA,,198.202.211.1; 2620:cb:2000::1,Webflow
+www.10xvotes.com,CNAME,cdn.webflow.com,198.202.211.1,Webflow
+pay.10xvotes.com,A,,"172.67.174.102, 104.21.72.31",Cloudflare proxy
+10xvotes.com,NS,"lisa.ns.cloudflare.com, andy.ns.cloudflare.com",,Cloudflare DNS
+10xvotes.com,MX,aspmx.l.google.com (+alt1-4),,Google Workspace
+10xvotes.com,TXT,google-site-verification x2; brevo-code:4bf20eaa73d0f0c3e84ebf91e6b8f292; v=spf1 include:_spf.google.com ~all,,"Google, Brevo"
+_dmarc.10xvotes.com,TXT,v=DMARC1; p=none; rua=mailto:dmarc-reports@10xvotes.com,,
+10xvotes.com,CAA,(none),,
+ab. / abcn. / ca.10xvotes.com,A,NXDOMAIN,,No wildcard DNS
+"10xvotes-{ab,abcn,ca,sk,mt,az,ga,oh,nc,dev,api,staging,test}.azurewebsites.net",A,NXDOMAIN,,"Limited name check, not enumeration"

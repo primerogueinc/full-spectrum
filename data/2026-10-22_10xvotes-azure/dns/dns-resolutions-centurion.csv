@@ -1,0 +1,12 @@
+Name,Type,Answer,Provider / meaning
+centurionproject.ca,A,185.230.63.107; 185.230.63.171; 185.230.63.186,Wix
+centurionproject.ca,NS,ns0.wixdns.net; ns1.wixdns.net,Wix
+www.centurionproject.ca,CNAME,cdn3.wixdns.net > cfd.wixdns.net > 172.66.3.8; 162.159.143.12,Wix
+thecenturionproject.ca,A,185.230.63.171; 185.230.63.107; 185.230.63.186,Wix
+thecenturionproject.ca,NS,ns1.wixdns.net; ns0.wixdns.net,Wix
+thecenturionproject.com,A,198.49.23.145,Unrelated (predates Centurion)
+thecenturionproject.com,NS,ns-cloud-c1..c4.googledomains.com,Google Domains
+centurionproject.com,A,15.197.148.33; 3.33.130.190,GoDaddy parking range
+centurionproject.com,NS,ns19.domaincontrol.com; ns20.domaincontrol.com,GoDaddy
+centurionproject.org,A,NXDOMAIN,
+app.centurionproject.ca,A,NXDOMAIN,
